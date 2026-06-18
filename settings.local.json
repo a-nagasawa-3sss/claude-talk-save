@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "Bash(VSCODE_PID=1234 sh -c 'cat _test_payload.json | node save-vscode-on-keyword.js')",
+      "Bash(VSCODE_PID=1234 node \"C:\\\\Users\\\\長沢宏彦\\\\Obsidian\\\\knowledge-base\\\\.claude\\\\scripts\\\\save-vscode-on-keyword.js\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "obsidian"
+  ],
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\長沢宏彦\\Obsidian\\knowledge-base\\.claude\\scripts\\save-transcript.js\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\長沢宏彦\\Obsidian\\knowledge-base\\.claude\\scripts\\save-on-keyword.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
